@@ -13,6 +13,10 @@ body {
   margin: 2rem;
 }
 
+.svg {
+  max-width: 10%;
+}
+
 @media (min-width: 1300px) {
   .grid_111 {
     display: grid;
