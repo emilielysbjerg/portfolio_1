@@ -56,8 +56,12 @@ details {
   line-height: 1.8;
 }
 
-summary h2 {
-  margin: 0;
+summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
 }
 
 /* DESKTOP starter*/
@@ -76,7 +80,9 @@ summary h2 {
   }
 
   .intro {
-    padding: 1rem;
+    padding-left: 30%;
+    padding-right: 30%;
+    gap: 2rem;
   }
 
   .content img {
