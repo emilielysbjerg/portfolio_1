@@ -1,0 +1,21 @@
+/*************** Reset *********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fbfbf7;
+}
+.grid_111 {
+  display: block;
+  margin: 2rem;
+}
+
+@media (min-width: 1300px) {
+  .grid_111 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

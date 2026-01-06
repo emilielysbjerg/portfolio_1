@@ -1,0 +1,98 @@
+/*************** Reset *********************/
+/* Fjerner browserens standard margin og padding
+   og sikrer ens box-model på tværs af browsere */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*************** Forside grid (mobile first) *********************/
+/* Grid bruges til forside-elementerne
+   På mobil vises indholdet i én kolonne */
+.grid_1_1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.25rem;
+  margin: 2rem;
+}
+
+/*************** Overskrift *********************/
+/* Overskriften centreres med Flexbox
+   for at skabe et tydeligt visuelt fokus */
+.overskrift {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+/* Stor typografi med let font-weight
+   og en let forskydning mod venstre for et personligt udtryk */
+.overskrift h1 {
+  font-size: 5rem; /* mobilvenlig størrelse */
+  font-weight: 200;
+  line-height: 1;
+  transform: translateX(0); /* fjern forskydning på mobil */
+  text-decoration-color: #3d83a6;
+  font-family: "Shippori Mincho", serif;
+  transform: translateX(0); /* fjern forskydning på mobil */
+  font-family: "Shippori Mincho", serif;
+}
+
+/*************** Velkomsttekst *********************/
+/* Teksten er centreret og holdt smal,
+   så den er nem at læse på mobil */
+.velkommen {
+  text-align: center;
+  margin: 2rem 1.5rem;
+  line-height: 1.8;
+}
+.forside-decor a {
+  text-decoration: none; /*sættes et a her, for at ramme a tagget - fjerner stregen under tekst*/
+  color: inherit;
+  text-align: center;
+}
+
+.forside-decor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem; /* styrer afstanden mellem billede og tekst */
+}
+
+/*************** Billeder *********************/
+/* Gør billeder responsive, så de altid
+   tilpasser sig skærmstørrelsen */
+.grid_1_1 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.forside-decor a:hover,
+.forside-decor a:focus {
+  transform: translateY(-5px);
+}
+
+/*************** Desktop layout *********************/
+@media screen and (min-width: 1300px) {
+  /* Grid skifter til to kolonner på større skærme */
+  .grid_1_1 {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 3rem; /* justér her */
+  }
+
+  /* Overskriften skaleres op på desktop
+     og flyttes lidt mere mod venstre */
+  .overskrift h1 {
+    font-size: 9rem;
+    transform: translateX(-90px);
+  }
+
+  /* Velkomstteksten får mere luft og begrænset bredde
+     for bedre læsbarhed på store skærme */
+  .velkommen {
+    max-width: 380px;
+    margin: 2rem auto;
+  }
+}

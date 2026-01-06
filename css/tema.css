@@ -1,0 +1,109 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== MOBIL FIRST ===== */
+.content {
+  display: grid;
+  grid-template-columns: 1fr; /* en kolonne på mobil */
+  gap: 1rem;
+  align-items: start;
+  text-align: center;
+  margin: 2em;
+}
+
+.content img {
+  max-width: 260px;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  border-radius: 10px;
+}
+
+details {
+  border-bottom: 1px solid #ccc;
+  padding: 12px 0;
+  font-family: sans-serif;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.knapper {
+  display: grid;
+  grid-template-columns: 1fr; /* én knap pr. række */
+  padding: 15px 75px; /* første er til højden, anden knap er til bredden */
+  gap: 2rem;
+}
+
+.knap {
+  background-color: #584f44;
+  color: #fff;
+  padding: 1.5rem;
+  text-decoration: none; /* fjerner stregen under tekst*/
+  border-radius: 0.2rem;
+  font-weight: 22px;
+  text-align: center;
+}
+
+.intro {
+  grid-template-columns: 1fr;
+  text-align: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  line-height: 1.8;
+}
+
+/* Hover/fokus */
+.knap:hover,
+.knap:focus {
+  background-color: #333;
+  transform: translateY(-2px);
+}
+
+.h2 :hover {
+  color: #bbb08d;
+}
+
+summary {
+  display: flex;
+  justify-content: space-between; /* tekst til venstre, pil til højre */
+  align-items: center;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+/* DESKTOP starter*/
+@media (min-width: 1300px) {
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* tekst og billede side om side */
+    padding: 10px 60px;
+    align-items: center;
+  }
+
+  .knapper {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px;
+    gap: 2rem;
+  }
+  .intro {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding-left: 400px;
+    padding-right: 400px;
+    line-height: 1.8;
+  }
+
+  .content img {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+  }
+}
+
+/* DESKTOP slutter*/

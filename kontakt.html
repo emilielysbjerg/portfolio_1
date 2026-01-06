@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/generel.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/burger.css" />
+    <link rel="stylesheet" href="css/forms.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Kontakt</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="/">
+          <img src="img_portfolio/logo65.svg" alt="Logo" />
+        </a>
+      </div>
+      <nav>
+        <ul class="menu">
+          <li><a href="ommig.html">Om mig</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+        <button class="burger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="form-section">
+        <article id="form-info">
+          <h2>Kontakt</h2>
+          <p>Udfyld denne formular og bliv kontaktet</p>
+        </article>
+        <form>
+          <section id="form-section-1">
+            <div class="form-group">
+              <label for="fornavn">Fornavn</label>
+              <input required type="text" id="fornavn" name="fornavn" />
+              <p class="error-message">Please enter a value</p>
+            </div>
+
+            <div class="form-group">
+              <label for="efternavn">Efternavn</label>
+              <input required type="text" id="efternavn" name="efternavn" />
+              <p class="error-message">Please enter a value</p>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input required type="email" id="email" name="email" />
+              <p class="error-message">Please enter a value</p>
+            </div>
+          </section>
+
+          <p class="error-message">Please enter a value</p>
+          <div class="form-group">
+            <label for="terms">
+              <input
+                required
+                type="checkbox"
+                id="terms"
+                name="accept_terms"
+                value="yes"
+              />
+              Accept terms
+            </label>
+          </div>
+
+          <h2></h2>
+
+          <button>Send formular</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <section class="grid_111">
+        <div>
+          <h2>Kontakt</h2>
+          <h3>emje0008@stud.ek.dk</h3>
+        </div>
+        <div>
+          <a href="/">
+            <img src="img_portfolio/logo65.svg" alt="Logo" />
+          </a>
+        </div>
+      </section>
+    </footer>
+    <script src="js/menu.js"></script>
+    <script src="js/forms.js"></script>
+  </body>
+</html>

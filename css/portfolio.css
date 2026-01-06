@@ -1,0 +1,38 @@
+/*************** Reset *********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  background-color: #fbfbf7;
+}
+
+.grid_1_1_1_1 {
+  text-align: center;
+}
+.tema-decor a {
+  text-decoration: none; /*sættes et a her, for at ramme a tagget - fjerner stregen under tekst*/
+  color: inherit;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+@media screen and (min-width: 1300px) {
+  .grid_1_1_1_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 10px;
+  }
+  .tekst {
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr;
+    align-items: start;
+  }
+}

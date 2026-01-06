@@ -1,0 +1,124 @@
+/*************** Reset *********************/
+/* Fjerner browserens standard margin og padding
+   og sikrer ens box-model på tværs af browsere */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*************** Om mig – Mobile first *********************/
+/* Begge om-mig sektioner er opbygget som grid
+   På mobil vises indholdet i én kolonne */
+.om_mig1,
+.om_mig2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+/*************** Tekst *********************/
+/* Teksten vises før billedet på mobil
+   for at sikre god læserækkefølge */
+.om_mig1 div,
+.om_mig2 div {
+  order: 1;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.9;
+}
+
+/*************** Billeder *********************/
+/* Billeder vises efter teksten på mobil
+   og gøres responsive */
+.om_mig1 img,
+.om_mig2 img {
+  order: 2;
+  max-width: 260px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+/*************** Popover *********************/
+/* Styling af popover-vinduet
+   Begrænset højde og bredde for god læsbarhed */
+[popover] {
+  max-width: 900px; /* styrer hvor bred den må blive */
+  width: 95%; /* fylder næsten hele skærmen */
+  max-height: 90vh;
+  padding: 2rem;
+  margin: auto;
+}
+
+[popover] img {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Wrapper til popover-knap
+   Centrerer knappen visuelt */
+.popup {
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0;
+}
+
+/* Knap til åbning af popover
+   Enkel styling med tydelig kontrast */
+.knap2 {
+  background-color: #584f44;
+  color: #fff;
+  border: none;
+  padding: 15px 25px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+/*************** Desktop layout *********************/
+@media (min-width: 1300px) {
+  /* Skifter til to kolonner på større skærme
+     og giver mere luft omkring indholdet */
+  .om_mig1,
+  .om_mig2 {
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+    padding: 4rem;
+    align-items: center;
+    text-align: left;
+  }
+
+  /*************** Sektion 1 *********************/
+  /* Tekst til venstre, billede til højre */
+  .om_mig1 div {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .om_mig1 img {
+    grid-column: 2;
+    grid-row: 1;
+    max-width: 400px;
+  }
+
+  /*************** Sektion 2 *********************/
+  /* Billede til venstre, tekst til højre
+     Samme HTML-struktur, men omvendt layout */
+  .om_mig2 img {
+    grid-column: 1;
+    grid-row: 1;
+    max-width: 400px;
+  }
+
+  .om_mig2 div {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
