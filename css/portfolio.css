@@ -17,8 +17,9 @@ body {
 .grid_1_1_1_1 {
   text-align: center;
 }
+
 .tema-decor a {
-  text-decoration: none; /*sættes et a her, for at ramme a tagget - fjerner stregen under tekst*/
+  text-decoration: none;
   color: inherit;
   padding-bottom: 20px;
   padding-top: 20px;
